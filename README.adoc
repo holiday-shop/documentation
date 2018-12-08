@@ -10,8 +10,7 @@ severeal features of OpenShift Container Platform with .NET and Azure.
 
 image:screenshots/screenshot.png[image]
 
-[[what-do-i-need-to-deploy-this-demo]]
-== What do I need to deploy this demo?
+== What do I need to deploy this microservices application?
 
 * A working OpenShift environment! 
 
