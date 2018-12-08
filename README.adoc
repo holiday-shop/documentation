@@ -4,7 +4,7 @@
 
 = What is this?
 
-A simple microservice application that simulates a holiday booking website (for
+City Beaks is a simple microservice application that simulates a holiday booking website (for
 city breaks). This demonstrates
 severeal features of OpenShift Container Platform with .NET and Azure.
 

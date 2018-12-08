@@ -1,4 +1,9 @@
-= Lab Guide: City Breaks
+:toc:
+
+= LAB Guide: City Breaks
+
+[NOTE]
+This lab guide is intended for learning the project, and running though things on your own. If you already know this project, and are showing other people, you might want to use the link:DEMO.adoc[demo guide] :-)
 
 == The first service: public-shopping-website
 
@@ -154,4 +159,4 @@ image:screenshots/blockCookies2.png[image]
 
 === Blue/Green deployments 
 
-TODO :)
+TODO :-)

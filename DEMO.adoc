@@ -1,17 +1,37 @@
-= Demo Guide: City Breaks 
+:toc:
+= DEMO Guide: City Breaks 
 
 [NOTE]
-These demo guides are intended for a reference and **prompt** for speakers who are showing this to an audience. These instructions are designed for people who know OpenShift and have run through the link:LAB.adoc[lab] several times before. It should not be used to learn how to use the project. For that, run through the more detailed link:LAB.adoc[lab instructions].
+This demo guide is intended for a reference and **prompt** for speakers who are showing this to an audience. These instructions are designed for people who know OpenShift and have run through the link:LAB.adoc[lab] several times before. It should not be used to learn how to use the project. For that, run through the more detailed link:LAB.adoc[lab instructions].
 
 = The first service: `public-shopping-website`
 
-== Setup 
+== Setup (if not demoing S2I)
 
 Use the *.NET Core* Source-2-image builder.
 
 include::includes/projectSetup.adoc[]
 
 == Demo Scenarios
+
+=== Deploy application from .NET source
+
+* *Time to complete:* 5 minutes
+* *Showcase features*: 
+** **.NET S2I**
+
+=== Steps to Demo 
+
+. Create a new project 
+. Browse to the service catalog, select **.NET Core** Source-2-image builder
+. Complete as follows;
+
+include::includes/projectSetup.adoc[]
+
+. Look at S2I Build process
+.. Highlight the "pushed to registry" - a container has been built
+. Look at the overview, to see deployment
+. Click on the "route" to see the app
 
 === Deploying a feature branch for multivariate testing or A/B deployments 
 
@@ -20,10 +40,53 @@ include::includes/projectSetup.adoc[]
 ** **Multivariate testing:** eg: test features on real users
 ** **A/B deployments:** eg: ease new app version into production
 
-=== Steps to demo
+==== Steps to demo
 
 . Deploy master branch
 . Add to project again, use **advanced options** to specify the *feature_weather* branch.
 .. Do _not_ deploy a new route.
 . Edit route, **Split traffic across multiple services**
 . View app and refresh to see two versions
+
+=== Using envionment variables for Feature Toggles
+
+* *Time to complete:* 5 minutes
+* *Showcase features:* 
+** Feature toggles in containers simply implemented with environment variables
+
+==== Steps to demo
+
+. Show the application without population being shown.
+. Edit the **Deployment Configuration** and set the `SHOW_POPULATION` variable to any non-empty value.
+. Watch the application redeploy, or trigger a redeploy manually
+. Show the application with population being shown. 
+
+=== Scaling a deployment
+
+* *Time to complete:* 3 minutes
+* *Showcase features*: 
+** Super easy scaling
+
+==== Steps to demo
+
+. Show the frontend application on one side of the screen
+. On the other side, show the OpenShift console
+. Start hitting refresh on the application, and click the pod scale-up button
+. Notice no loss in service
+. Extra: Redeploy the app to show several pods moving to a new deployment.
+
+=== Configuring all pods to connect to a database 
+
+* *Time to complete:* 5 minutes
+* *Showcase features*:
+** Database connectivity
+
+==== Steps to demo
+
+. Edit the **deployment** configuration with the following;
+** `DATABASE_USERNAME`
+** `DATABASE_PASSWORD`
+
+=== Blue/Green deployments
+
+TODO :-)
