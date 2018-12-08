@@ -1,29 +1,23 @@
 :toc:
 
-[[city-breaks]]
-city-breaks
------------
-
-A simple demo application that simulates a holiday booking website (for
-city breaks) and shows the results on a web page. This demonstrates
-severeal features of OpenShift Container Platform.
+= City Breaks 
 
 = What is this?
 
-*Screenshot*
+A simple microservice application that simulates a holiday booking website (for
+city breaks). This demonstrates
+severeal features of OpenShift Container Platform.
 
 image:screenshots/screenshot.png[image]
 
 [[what-do-i-need-to-deploy-this-demo]]
 == What do I need to deploy this demo?
 
-You simply need a working OpenShift environment! You can showcase Azure
-specific functionality more easily if it is running on Azure.
+* A working OpenShift environment! 
 
-[[how-to-deploy-this-on-openshift]]
-= How to deploy this on OpenShift
+You can showcase Azure specific functionality more easily if it is running on Azure.
 
-== The frontend: public-shopping-website
+= The first service: public-shopping-website
 
 === Start a build of the public-shopping-website
 
@@ -68,6 +62,8 @@ You are now ready to try out one or more of the demo scenarios!
 
 [[demo-scenarios]]
 == Demo Scenarios
+
+:toc:
 
 === Deploying a feature branch for multivariate testing or A/B deployments 
 
@@ -117,7 +113,7 @@ image:screenshots/withWeather.png[image]
 
 image:screenshots/withoutWeather.png[image]
 
-=== Using envionment variables for Feature Toggles ----
+=== Using envionment variables for Feature Toggles
 
 * *Time to demo:* 5 minutes
 * *Why is this cool?:* Showchasing how a modern application development
