@@ -1,5 +1,4 @@
 :toc:
-:ext-relative: {}
 
 = City Breaks 
 
@@ -20,6 +19,6 @@ You can showcase Azure specific functionality more easily if it is running on Az
 
 == Get started
 
-link:LAB{ext-relative}[LAB Guide] (self-guided)
-link:DEMO{ext-relative}[DEMO Guide] (showing others)
+* link:LAB[LAB Guide] (self-guided)
+* link:DEMO[DEMO Guide] (showing others)
 
