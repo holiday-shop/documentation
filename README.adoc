@@ -6,7 +6,7 @@
 
 A simple microservice application that simulates a holiday booking website (for
 city breaks). This demonstrates
-severeal features of OpenShift Container Platform.
+severeal features of OpenShift Container Platform with .NET and Azure.
 
 image:screenshots/screenshot.png[image]
 
