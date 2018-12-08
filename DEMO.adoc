@@ -1,0 +1,29 @@
+= Demo Guide: City Breaks 
+
+[NOTE]
+These demo guides are intended for a reference and **prompt** for speakers who are showing this to an audience. These instructions are designed for people who know OpenShift and have run through the link:LAB.adoc[lab] several times before. It should not be used to learn how to use the project. For that, run through the more detailed link:LAB.adoc[lab instructions].
+
+= The first service: `public-shopping-website`
+
+== Setup 
+
+Use the *.NET Core* Source-2-image builder.
+
+include::includes/projectSetup.adoc[]
+
+== Demo Scenarios
+
+=== Deploying a feature branch for multivariate testing or A/B deployments 
+
+* *Time to complete:* 5 minutes
+* *Showcase features*: 
+** **Multivariate testing:** eg: test features on real users
+** **A/B deployments:** eg: ease new app version into production
+
+=== Steps to demo
+
+. Deploy master branch
+. Add to project again, use **advanced options** to specify the *feature_weather* branch.
+.. Do _not_ deploy a new route.
+. Edit route, **Split traffic across multiple services**
+. View app and refresh to see two versions

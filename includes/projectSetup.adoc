@@ -1,0 +1,6 @@
+* *Add to Project:* Create Project
+* *Project Name:* city-info
+* *Project Display Name:* City Info
+* *Project Description:* ...
+* *Version:* 2.0 IMPORTANT. 
+

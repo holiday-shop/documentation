@@ -1,6 +1,8 @@
-= The first service: public-shopping-website
+= Lab Guide: City Breaks
 
-=== Tutorial: Build the service
+== The first service: public-shopping-website
+
+=== Build the service
 
 In OpenShift Container Platform, you need to select *.NET Core* from the
 service catalog. If you are running OpenShift Origin, you can import
@@ -16,11 +18,10 @@ image:screenshots/dotnetDeploymentWizard1.png[image]
 
 Complete the Wizard with the following details;
 
-* *Add to Project:* Create Project
-* *Project Name:* city-info
-* *Project Display Name:* City Info
-* *Project Description:* ...
-* *Version:* 2.0 - The screenshot _above_ shows the OpenShift builder is
+include::includes/projectSetup.adoc[]
+
+[IMPORTANT]
+The screenshot _above_ shows the OpenShift builder is
 version 1.0, however, this builder has the option to use a compiler
 which is different for .NET Core 1.0 or .NET Core 2.0 projects. The
 version you are selecting in the screenshot _below_ is the *compiler
@@ -39,16 +40,9 @@ project overview;
 
 image:screenshots/appOverview.png[image]
 
-You are now ready to try out one or more of the demo scenarios!
+=== Deploy a feature branch for multivariate testing or A/B deployments 
 
-[[demo-scenarios]]
-== Demo Scenarios
-
-:toc:
-
-=== Deploying a feature branch for multivariate testing or A/B deployments 
-
-* *Time to demo:* 5 minutes
+* *Time to complete:* 5 minutes
 * *Why is this cool?:* Feature branches are commonly used by developers
 to develop new features that have not yet been integrated into the main
 application. Product Managers might typically want to deploy a feature
@@ -96,7 +90,7 @@ image:screenshots/withoutWeather.png[image]
 
 === Using envionment variables for Feature Toggles
 
-* *Time to demo:* 5 minutes
+* *Time to complete:* 5 minutes
 * *Why is this cool?:* Showchasing how a modern application development
 principle, "feature toggles", are simply and easily implemented with
 containers.
@@ -118,7 +112,7 @@ image:screenshots/addPopulation.png[image]
 
 === Configuring all pods to connect to a database 
 
-* *Time to demo:* 5 minutes
+* *Time to complete:* 5 minutes
 * *Why is this cool?:* Showcases how microservice workloads absolutely
 don't have to be stateless only, and how configuration is commonly
 acheived with containers.
@@ -138,7 +132,7 @@ city-info.
 
 === Scaling a deployment
 
-* *Time to demo:* 3
+* *Time to complete:* 3
 * *Why is this cool?:* To show how scaling is so super easy!
 
 You can scale the city-info project at any time, just using the up/down
