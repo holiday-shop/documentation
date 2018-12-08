@@ -17,8 +17,13 @@ image:screenshots/screenshot.png[image]
 
 You can showcase Azure specific functionality more easily if it is running on Azure.
 
-== Get started
+= Get started
 
-* link:LAB.adoc[LAB Guide] (self-guided)
-* link:DEMO.adoc[DEMO Guide] (showing others)
+== LAB Guide 
+
+The link:LAB.adoc[LAB Guide] is intended for learning the project, running through things on your own.
+
+== DEMO Guide
+
+The link:DEMO.adoc[DEMO Guide] is intended for showing others OpenShift with .NET and Azure, useful for workshops, presentations, and speaking sessions.
 
