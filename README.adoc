@@ -8,22 +8,24 @@ A simple demo application that simulates a holiday booking website (for
 city breaks) and shows the results on a web page. This demonstrates
 severeal features of OpenShift Container Platform.
 
-*Contents;*
+= What is this?
 
 *Screenshot*
 
 image:screenshots/screenshot.png[image]
 
 [[what-do-i-need-to-deploy-this-demo]]
-What do I need to deploy this demo?
------------------------------------
+== What do I need to deploy this demo?
 
 You simply need a working OpenShift environment! You can showcase Azure
 specific functionality more easily if it is running on Azure.
 
 [[how-to-deploy-this-on-openshift]]
-How to deploy this on OpenShift
--------------------------------
+= How to deploy this on OpenShift
+
+== The frontend: public-shopping-website
+
+=== Start a build of the public-shopping-website
 
 In OpenShift Container Platform, you need to select *.NET Core* from the
 service catalog. If you are running OpenShift Origin, you can import
@@ -65,11 +67,9 @@ image:screenshots/appOverview.png[image]
 You are now ready to try out one or more of the demo scenarios!
 
 [[demo-scenarios]]
-Demo Scenarios
---------------
+== Demo Scenarios
 
-Deploying a feature branch for multiscreenshotsiate testing or A/B
-deployments ----
+=== Deploying a feature branch for multivariate testing or A/B deployments 
 
 * *Time to demo:* 5 minutes
 * *Why is this cool?:* Feature branches are commonly used by developers
@@ -117,7 +117,7 @@ image:screenshots/withWeather.png[image]
 
 image:screenshots/withoutWeather.png[image]
 
-Using envionment screenshotsiables for Feature Toggles ----
+=== Using envionment variables for Feature Toggles ----
 
 * *Time to demo:* 5 minutes
 * *Why is this cool?:* Showchasing how a modern application development
@@ -139,7 +139,7 @@ You should see your city information pop up now with population numbers;
 
 image:screenshots/addPopulation.png[image]
 
-Configuring all pods to connect to a database ----
+=== Configuring all pods to connect to a database 
 
 * *Time to demo:* 5 minutes
 * *Why is this cool?:* Showcases how microservice workloads absolutely
@@ -159,7 +159,7 @@ this Git repo.
 The database name and the single table name are both hard-coded to
 city-info.
 
-Scaling a deployment ----
+=== Scaling a deployment
 
 * *Time to demo:* 3
 * *Why is this cool?:* To show how scaling is so super easy!
@@ -181,6 +181,6 @@ image:screenshots/blockCookies1.png[image]
 
 image:screenshots/blockCookies2.png[image]
 
-Blue/Green deployments ----
+=== Blue/Green deployments 
 
 TODO :)
