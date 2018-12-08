@@ -19,6 +19,6 @@ You can showcase Azure specific functionality more easily if it is running on Az
 
 == Get started
 
-* link:LAB[LAB Guide] (self-guided)
-* link:DEMO[DEMO Guide] (showing others)
+* link:LAB.adoc[LAB Guide] (self-guided)
+* link:DEMO.adoc[DEMO Guide] (showing others)
 
