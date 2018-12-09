@@ -35,6 +35,9 @@ include::includes/projectSetup.adoc[]
 
 include::includes/projectSetup.adoc[]
 
+Build the project;
+
+. *Git Repository*: `https://github.com/city-breaks-on-openshift/public-shopping-website.git`
 . Look at S2I Build process
 .. Highlight the "pushed to registry" - a container has been built
 . Look at the overview, to see deployment
