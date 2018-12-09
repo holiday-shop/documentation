@@ -12,6 +12,8 @@ Use the *.NET Core* Source-2-image builder.
 
 include::includes/projectSetup.adoc[]
 
+* *Git Repository*: `https://github.com/city-breaks-on-openshift/public-shopping-website.git`
+
 == Demo Scenarios 
 
 === Business: Our city-breaks website should be web-scale! It needs to handle lots of orders.
