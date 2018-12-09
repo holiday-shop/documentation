@@ -11,7 +11,7 @@ This lab guide is intended for learning the project, and running though things o
 
 In OpenShift Container Platform, you need to select *.NET Core* from the
 service catalog. If you are running OpenShift Origin, you can import
-this image builder into your service catalog by running oc create -f ...
+this image builder into your service catalog by running `oc create -f ...`
 against these files;
 https://github.com/openshift/openshift-ansible/tree/master/roles/openshift_examples/files/examples/v3.7/image-streams
 
@@ -34,16 +34,34 @@ version*, and this is a .NET Core 2.0 project. Therefore it is very
 important to select version 2 builder. If you use select version 1 here
 by accident then it will expect a .NET Core 1.0 project.json files and
 similar that have been deprecated and the build would fail!
-* *Application Name:* city-info
-* *Git Repository:*
-https://github.com/jamesread/dotnetcore-city-info.git
+
+* *Application Name:* `city-breaks`
+* *Git Repository:* `https://github.com/city-breaks-on-openshift/public-shopping-website.git`
 
 image:screenshots/dotnetDeploymentWizard2.png[image]
 
 Once the project has been created, it should see a build start in the
-project overview;
+project overview. The build will take a couple of minutes, and is running trough this process;
 
 image:screenshots/appOverview.png[image]
+
+. Get source code from GitHub
+. Determine that this is .NET source code
+. Builds the code into a binary (.exe)
+. Puts that .exe and dependencies into a container.
+. Publishes that container into the local OpenShift Container Registry
+
+=== Open the application in a web browser
+
+Once the application has deployed, it should look like this;
+
+image:screenshots/deploying.png[image]
+
+OpenShift will automatically create a "route" so that you can access this application from outside OpenShift. Click on the link above the pod to open the app.
+
+You should have an app that looks like this;
+
+image:screenshots/app.png[image]
 
 === Deploy a feature branch for multivariate testing or A/B deployments 
 
