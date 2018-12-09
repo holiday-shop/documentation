@@ -14,7 +14,9 @@ image:screenshots/screenshot.png[image]
 
 * A working OpenShift environment! 
 
-You can showcase Azure specific functionality more easily if it is running on Azure.
+== Microsoft Azure and .NET features
+
+This microservices application was designed to showcase general OpenShift, but also includes some Azure specific functionality, and is mostly built with .NET technologies.
 
 = Get started
 
