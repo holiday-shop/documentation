@@ -7,7 +7,7 @@ This lab guide is intended for learning the project, and running though things o
 
 == The first service: public-shopping-website
 
-=== Build the service
+=== Developer: I want to quickly deploy an existing .NET app into a container
 
 In OpenShift Container Platform, you need to select *.NET Core* from the
 service catalog. If you are running OpenShift Origin, you can import
@@ -41,9 +41,11 @@ similar that have been deprecated and the build would fail!
 image:screenshots/dotnetDeploymentWizard2.png[image]
 
 Once the project has been created, it should see a build start in the
-project overview. The build will take a couple of minutes, and is running trough this process;
+project overview. The build will take a couple of minutes;
 
 image:screenshots/appOverview.png[image]
+
+**Source 2 Image Build Process**
 
 . Get source code from GitHub
 . Determine that this is .NET source code
@@ -51,7 +53,7 @@ image:screenshots/appOverview.png[image]
 . Puts that .exe and dependencies into a container.
 . Publishes that container into the local OpenShift Container Registry
 
-=== Open the application in a web browser
+=== Developer: I want to see that the app I deployed is working
 
 Once the application has deployed, it should look like this;
 
@@ -63,7 +65,7 @@ You should have an app that looks like this;
 
 image:screenshots/app.png[image]
 
-=== Deploy a feature branch for multivariate testing or A/B deployments 
+=== Developer: I now want to test a feature branch for multivariate testing or A/B deployments 
 
 * *Time to complete:* 5 minutes
 * *Why is this cool?:* Feature branches are commonly used by developers
@@ -111,7 +113,7 @@ image:screenshots/withWeather.png[image]
 
 image:screenshots/withoutWeather.png[image]
 
-=== Using envionment variables for Feature Toggles
+=== Developer: I want to use feature toggles to enable experimental features 
 
 * *Time to complete:* 5 minutes
 * *Why is this cool?:* Showchasing how a modern application development
@@ -133,7 +135,27 @@ You should see your city information pop up now with population numbers;
 
 image:screenshots/addPopulation.png[image]
 
-=== Configuring all pods to connect to a database 
+=== Operations: I need to scale a deployment because I think there will be more traffic
+
+As an operations person, you might expect a lot of people to now start using this web application. You don't think that a single container can take all these requests, so you want to scale up the deployment that the developer has created. 
+
+Click on the "up" button to scale the application to multiple conatiners/pods.
+
+image::screenshots/scalePods.png[]
+
+=== Operations: Scale automatically based on CPU load
+
+Scaling manually to several pods is OK, when you expect load, but you can scale automatically based on several factors, including CPU load. Go to the Deployment Configuration for city-breaks, and add an auto-scaler.
+
+image::screenshots/addAutoscaler.png[]
+
+Set the following:
+
+* **Min pods**: 3
+* **Max pods**: 5
+* **CPU Request target**: 50%
+
+=== Developer: I need to connect to a database
 
 * *Time to complete:* 5 minutes
 * *Why is this cool?:* Showcases how microservice workloads absolutely

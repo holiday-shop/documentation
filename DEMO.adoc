@@ -14,7 +14,7 @@ include::includes/projectSetup.adoc[]
 
 == Demo Scenarios
 
-=== Deploy application from .NET source
+=== Developer: I want to quickly deploy an existing .NET app into a container
 
 * *Time to complete:* 5 minutes
 * *Showcase features*: 
@@ -33,7 +33,7 @@ include::includes/projectSetup.adoc[]
 . Look at the overview, to see deployment
 . Click on the "route" to see the app
 
-=== Deploying a feature branch for multivariate testing or A/B deployments 
+=== Developer: I want to see that the app I deployed is working
 
 * *Time to complete:* 5 minutes
 * *Showcase features*: 
@@ -48,7 +48,21 @@ include::includes/projectSetup.adoc[]
 . Edit route, **Split traffic across multiple services**
 . View app and refresh to see two versions
 
-=== Using envionment variables for Feature Toggles
+=== Developer: I now want to test a feature branch for multivariate testing or A/B deployments 
+
+* *Time to complete:* 5 minutes
+* *Showcase features:* 
+** Deploying a paralell feature branch enables use cases like multicariate testing or A/B deployments
+
+==== Steps to demo
+
+. Add to the project again, with a .NET Core Builder
+. This time use **advanced options** to specify the *feature_weather* branch
+. Do _not_ deploy a new route
+. Edit route, *split traffic across multiple services*, select the new feature branch.
+. View the application, see the original or the new feature.
+
+=== Developer: I want to use feature toggles to enable experimental features 
 
 * *Time to complete:* 5 minutes
 * *Showcase features:* 
@@ -61,7 +75,7 @@ include::includes/projectSetup.adoc[]
 . Watch the application redeploy, or trigger a redeploy manually
 . Show the application with population being shown. 
 
-=== Scaling a deployment
+=== Operations: I need to scale a deployment because I think there will be more traffic
 
 * *Time to complete:* 3 minutes
 * *Showcase features*: 
@@ -75,7 +89,9 @@ include::includes/projectSetup.adoc[]
 . Notice no loss in service
 . Extra: Redeploy the app to show several pods moving to a new deployment.
 
-=== Configuring all pods to connect to a database 
+=== Operations: Scale automatically based on CPU load
+
+=== Developer: I need to connect to a database
 
 * *Time to complete:* 5 minutes
 * *Showcase features*:

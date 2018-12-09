@@ -8,7 +8,7 @@ City Beaks is a simple microservice application that simulates a holiday booking
 city breaks). This demonstrates
 severeal features of OpenShift Container Platform with .NET and Azure.
 
-image:screenshots/screenshot.png[image]
+image:screenshots/app.png[image]
 
 == What do I need to deploy this microservices application?
 
