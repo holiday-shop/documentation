@@ -5,7 +5,7 @@
 [NOTE]
 This lab guide is intended for learning the project, and running though things on your own. If you already know this project, and are showing other people, you might want to use the link:DEMO.adoc[demo guide] :-)
 
-== The first service: public-shopping-website
+= The first service: `public-shopping-website`
 
 === Business: Our city-breaks website should enable our digital travel agency! 
 
@@ -59,8 +59,6 @@ image:screenshots/appOverview.png[image]
 . Puts that .exe and dependencies into a container.
 . Publishes that container into the local OpenShift Container Registry
 
-=== Developer: I want to see that the app I deployed is working
-
 Once the application has deployed, it should look like this;
 
 image:screenshots/deploying.png[image]
@@ -70,6 +68,37 @@ OpenShift will automatically create a "route" so that you can access this applic
 You should have an app that looks like this;
 
 image:screenshots/app.png[image]
+
+=== Business: Can we try showing the population information, it might encourage our customers to buy!
+
+Your managment would really like the shopping website to show the population for each city. Thankfully, your developers wrote the code for this earlier, now  you just need to configure it...
+
+=== Operations: I want to use feature toggles to enable experimental features 
+
+* *Time to complete:* 5 minutes
+* *Why is this cool?:* Showchasing how a modern application development
+principle, "feature toggles", are simply and easily implemented with
+containers.
+
+This C# dotnet application will check for the environment
+screenshotsiable SHOW_POPULATION as a means for enabling this feature in
+responses to requests for city information. You should set this in the
+DeploymentConfig, and watch OpenShift deploy a new version
+automatically.
+
+image:screenshots/editDcEnv.png[image]
+
+Wait a moment while the application redeploys (necessary for environment
+screenshotsiables to take effect).
+
+You should see your city information pop up now with population numbers;
+
+image:screenshots/addPopulation.png[image]
+
+
+=== Business: Can we try showing the latest weather? Research shows customers like sunny weather!
+
+:-)
 
 === Developer: I now want to test a feature branch for multivariate testing or A/B deployments 
 
@@ -118,28 +147,6 @@ Cookies are disabled to disable session persistance.
 image:screenshots/withWeather.png[image]
 
 image:screenshots/withoutWeather.png[image]
-
-=== Developer: I want to use feature toggles to enable experimental features 
-
-* *Time to complete:* 5 minutes
-* *Why is this cool?:* Showchasing how a modern application development
-principle, "feature toggles", are simply and easily implemented with
-containers.
-
-This C# dotnet application will check for the environment
-screenshotsiable SHOW_POPULATION as a means for enabling this feature in
-responses to requests for city information. You should set this in the
-DeploymentConfig, and watch OpenShift deploy a new version
-automatically.
-
-image:screenshots/editDcEnv.png[image]
-
-Wait a moment while the application redeploys (necessary for environment
-screenshotsiables to take effect).
-
-You should see your city information pop up now with population numbers;
-
-image:screenshots/addPopulation.png[image]
 
 === Operations: I need to scale a deployment because I think there will be more traffic
 
@@ -226,3 +233,10 @@ image:screenshots/blockCookies1.png[image]
 
 image:screenshots/blockCookies2.png[image]
 
+== Going multi-service: `photo-service` and `ratings-service`
+
+=== Business: You deployed a website?! I want pretty pictures!
+
+First things done, now we're going to do progressive enhancement through multiple services.
+
+=== Developer: I want to use a separate service for serving photos, progressive enhancement

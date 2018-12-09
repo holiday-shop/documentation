@@ -12,7 +12,7 @@ Use the *.NET Core* Source-2-image builder.
 
 include::includes/projectSetup.adoc[]
 
-== Demo Scenarios
+== Demo Scenarios 
 
 === Business: Our city-breaks website should be web-scale! It needs to handle lots of orders.
 
@@ -38,36 +38,11 @@ include::includes/projectSetup.adoc[]
 . Look at the overview, to see deployment
 . Click on the "route" to see the app
 
-=== Developer: I want to see that the app I deployed is working
+=== Business: Can we try showing the population information, it might encourage our customers to buy!
 
-* *Time to complete:* 5 minutes
-* *Showcase features*: 
-** **Multivariate testing:** eg: test features on real users
-** **A/B deployments:** eg: ease new app version into production
+Code already written, over to the developers to deploy.
 
-==== Steps to demo
-
-. Deploy master branch
-. Add to project again, use **advanced options** to specify the *feature_weather* branch.
-.. Do _not_ deploy a new route.
-. Edit route, **Split traffic across multiple services**
-. View app and refresh to see two versions
-
-=== Developer: I now want to test a feature branch for multivariate testing or A/B deployments 
-
-* *Time to complete:* 5 minutes
-* *Showcase features:* 
-** Deploying a paralell feature branch enables use cases like multicariate testing or A/B deployments
-
-==== Steps to demo
-
-. Add to the project again, with a .NET Core Builder
-. This time use **advanced options** to specify the *feature_weather* branch
-. Do _not_ deploy a new route
-. Edit route, *split traffic across multiple services*, select the new feature branch.
-. View the application, see the original or the new feature.
-
-=== Developer: I want to use feature toggles to enable experimental features 
+=== Operations: I want to use feature toggles to enable experimental features 
 
 * *Time to complete:* 5 minutes
 * *Showcase features:* 
@@ -76,9 +51,27 @@ include::includes/projectSetup.adoc[]
 ==== Steps to demo
 
 . Show the application without population being shown.
-. Edit the **Deployment Configuration** and set the `SHOW_POPULATION` variable to any non-empty value.
+. Edit the **Deployment Configuration** and set the `SHOW_POPULATION` variable to `YES` (case sensitive).
 . Watch the application redeploy, or trigger a redeploy manually
 . Show the application with population being shown. 
+
+=== Business: Can we try showing the latest weather? Research shows customers like sunny weather!
+
+...
+
+=== Developer: I now want to test a feature branch for multivariate testing or A/B deployments 
+
+* *Time to complete:* 5 minutes
+* *Showcase features:* 
+** Deploying a paralell feature branch enables use cases like multivariate testing or A/B deployments
+
+==== Steps to demo
+
+. Add to the project again, with a .NET Core Builder
+. This time use **advanced options** to specify the *feature_weather* branch
+. Do _not_ deploy a new route
+. Edit route, *split traffic across multiple services*, select the new feature branch.
+. View the application, see the original or the new feature.
 
 === Operations: I need to scale a deployment because I think there will be more traffic
 
@@ -132,3 +125,15 @@ include::includes/projectSetup.adoc[]
 ** `DATABASE_USERNAME`
 ** `DATABASE_PASSWORD`
 
+== Going multi-service: `photo-service` and `ratings-service`
+
+=== Business: You deployed a website?! I want pretty pictures!
+
+First things done, now we're going to do progressive enhancement through multiple services.
+
+=== Developer: I want to use a separate service for serving photos, progressive enhancement
+
+. **Add to Project**, **Browse Catalog**, **.NET Core**
+. Git Repository; `https://github.com/city-breaks-on-openshift/photo-service.git`
+. Watch build and deploy
+. Show photos API
