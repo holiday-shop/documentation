@@ -131,6 +131,12 @@ Code already written, over to the developers to deploy.
 
 = Going multi-service: `photo-service` and `ratings-service`
 
+== Setup
+
+None really.
+
+== Demo Scenarios
+
 === Business: The website is comign on, but we want pictures and social!
 
 First things done, now we're going to do progressive enhancement through multiple services.
