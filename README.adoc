@@ -18,6 +18,16 @@ image:screenshots/screenshot.png[image]
 
 This microservices application was designed to showcase general OpenShift, but also includes some Azure specific functionality, and is mostly built with .NET technologies.
 
+This project will include the following Azure specific demos;
+
+* Azure service broker [Available]
+* Azure blob storage access from Containers (via picture-service) [Not yet available]
+* Azure disks persistent volumes [Not yet available]
+* Azure DevOps integration [Not yet available]
+* Azure AI? [Not yet available]
+
+link:roadmap/whiteboardRoadmap.png[Azure demo roadmap]
+
 = Get started
 
 == LAB Guide 
