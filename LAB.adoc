@@ -155,7 +155,47 @@ Set the following:
 * **Max pods**: 5
 * **CPU Request target**: 50%
 
+=== Operations: I need to scale a deployment because I think there will be more traffic
+
+* *Time to complete:* 3
+* *Why is this cool?:* To show how scaling is so super easy!
+
+You can scale the city-info project at any time, just using the up/down
+scale buttons. This will not impact existing connected users negatively.
+
+image:screenshots/scalePods.png[image]
+
+When you view the dashboard, you will see the city-info is provided with
+a pod hostname. When you scale the application however, you will
+probably see get updates from a single pod.
+
+This is because OpenShift sets a browser cookie, which sticks you onto
+one pod by default. You can easily overcome this, block the OpenShift
+cookie in your browser like so;
+
+=== Operations: I want the application traffic to be encrypted
+
+To secure the traffic of applications running on OpenShift, you can enable several types of TLS encryption. Routes are encrypted in OpenShift. 
+
+Go and find the application route, and edit it.
+
+You should see an option to "Secure Route", tick this; 
+
+image:screenshots/tls.png[]
+
+For this use case, we'll use "Edge" termination (the encryption is terminated on the OpenShift router), but other options to re-encrypt, or pass through to the application are available. 
+
+We can also force insecure traffic to be redirected, let's enable this option too.
+
+OpenShift will automatically use existing certificates for this configuration, which means you do not have to import you own certificate.
+
+If you go back to the application overview, you should see that your application is now accessible over HTTPS;
+
+image:screenshots/https.png[]
+
 === Developer: I need to connect to a database
+
+**Not yet complete**
 
 * *Time to complete:* 5 minutes
 * *Why is this cool?:* Showcases how microservice workloads absolutely
@@ -175,28 +215,8 @@ this Git repo.
 The database name and the single table name are both hard-coded to
 city-info.
 
-=== Scaling a deployment
-
-* *Time to complete:* 3
-* *Why is this cool?:* To show how scaling is so super easy!
-
-You can scale the city-info project at any time, just using the up/down
-scale buttons. This will not impact existing connected users negatively.
-
-image:screenshots/scalePods.png[image]
-
-When you view the dashboard, you will see the city-info is provided with
-a pod hostname. When you scale the application however, you will
-probably see get updates from a single pod.
-
-This is because OpenShift sets a browser cookie, which sticks you onto
-one pod by default. You can easily overcome this, block the OpenShift
-cookie in your browser like so;
 
 image:screenshots/blockCookies1.png[image]
 
 image:screenshots/blockCookies2.png[image]
 
-=== Blue/Green deployments 
-
-TODO :-)
