@@ -14,13 +14,18 @@ include::includes/projectSetup.adoc[]
 
 == Demo Scenarios
 
-=== Developer: I want to quickly deploy an existing .NET app into a container
+=== Business: Our city-breaks website should be web-scale! It needs to handle lots of orders.
+
+* Introduce the city-breaks concept, and different roles.
+
+
+=== Developer: I want to quickly get our .NET website into a container
 
 * *Time to complete:* 5 minutes
 * *Showcase features*: 
-** **.NET S2I**
+** Build a non-container app with **.NET S2I** in seconds
 
-=== Steps to Demo 
+==== Steps to Demo 
 
 . Create a new project 
 . Browse to the service catalog, select **.NET Core** Source-2-image builder
@@ -89,9 +94,33 @@ include::includes/projectSetup.adoc[]
 . Notice no loss in service
 . Extra: Redeploy the app to show several pods moving to a new deployment.
 
-=== Operations: Scale automatically based on CPU load
+=== Operations: I want it to scale automatically based on CPU load
+
+. Deployment Configuration, add Autoscaler;
+. Set the following:
+** **Min pods**: 3
+** **Max pods**: 5
+** **CPU Request target**: 50%
+. Visit deployment again, see that it is working
+
+=== Operations: I want the application traffic to be encrypted
+
+* **Time to complete**: 5 minutes
+* **Showcase features**: TLS with the following;
+** Re-encrypt
+** Passthru
+** Edge
+
+. Edit route
+. Tick `secure route`
+. TLS Termination: **Edge**
+. Insecure traffic: **Redirect**
+. Talking point: Your own certificates
+. Visit route again, accept self signed certificate
 
 === Developer: I need to connect to a database
+
+**Not yet complete**
 
 * *Time to complete:* 5 minutes
 * *Showcase features*:
@@ -103,6 +132,3 @@ include::includes/projectSetup.adoc[]
 ** `DATABASE_USERNAME`
 ** `DATABASE_PASSWORD`
 
-=== Blue/Green deployments
-
-TODO :-)

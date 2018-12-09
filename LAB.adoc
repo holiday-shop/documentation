@@ -7,7 +7,13 @@ This lab guide is intended for learning the project, and running though things o
 
 == The first service: public-shopping-website
 
-=== Developer: I want to quickly deploy an existing .NET app into a container
+=== Business: Our city-breaks website should enable our digital travel agency! 
+
+Your business managers and executives have told your tech department that the public shopping website for your city breaks travel agency needs to be at the forefront of the company's digital agenda! You don't really know what that really means, but you know the site will handle lots of traffic, and is the main source of your travel agency's revenue now-a-days. All your customers are now booking online. You think that using OpenShift and a Microservices approach will get you running more quickly, and keep the company on-track for it's digital agenda.
+
+The Developers and Operations teams will have to work together with OpenShift to make this happen.
+
+=== Developer: I want to quickly get our .NET website into a container
 
 In OpenShift Container Platform, you need to select *.NET Core* from the
 service catalog. If you are running OpenShift Origin, you can import
@@ -143,7 +149,7 @@ Click on the "up" button to scale the application to multiple conatiners/pods.
 
 image::screenshots/scalePods.png[]
 
-=== Operations: Scale automatically based on CPU load
+=== Operations: I want it to scale automatically based on CPU load
 
 Scaling manually to several pods is OK, when you expect load, but you can scale automatically based on several factors, including CPU load. Go to the Deployment Configuration for city-breaks, and add an auto-scaler.
 
