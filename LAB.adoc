@@ -148,6 +148,10 @@ image:screenshots/withWeather.png[image]
 
 image:screenshots/withoutWeather.png[image]
 
+=== Business Great! We're going to start marketing the site!
+
+Your business folks are impressed at how quickly you got those changes into production. They're going to start marketing the site, so that means more load to deal with!
+
 === Operations: I need to scale a deployment because I think there will be more traffic
 
 As an operations person, you might expect a lot of people to now start using this web application. You don't think that a single container can take all these requests, so you want to scale up the deployment that the developer has created. 
@@ -233,10 +237,16 @@ image:screenshots/blockCookies1.png[image]
 
 image:screenshots/blockCookies2.png[image]
 
-== Going multi-service: `photo-service` and `ratings-service`
+= Going multi-service: `photo-service` and `ratings-service`
 
-=== Business: You deployed a website?! I want pretty pictures!
+=== Business: The website is coming on, but we want pictures and social!
 
 First things done, now we're going to do progressive enhancement through multiple services.
 
 === Developer: I want to use a separate service for serving photos, progressive enhancement
+
+TODO
+
+=== Operations: I want images stored externally where they can be easily managed.
+
+TODO

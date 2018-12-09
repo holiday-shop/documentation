@@ -73,6 +73,10 @@ Code already written, over to the developers to deploy.
 . Edit route, *split traffic across multiple services*, select the new feature branch.
 . View the application, see the original or the new feature.
 
+=== Business Great! We're going to start marketing the site!
+
+. Invite audience to visit the site.
+
 === Operations: I need to scale a deployment because I think there will be more traffic
 
 * *Time to complete:* 3 minutes
@@ -125,9 +129,9 @@ Code already written, over to the developers to deploy.
 ** `DATABASE_USERNAME`
 ** `DATABASE_PASSWORD`
 
-== Going multi-service: `photo-service` and `ratings-service`
+= Going multi-service: `photo-service` and `ratings-service`
 
-=== Business: You deployed a website?! I want pretty pictures!
+=== Business: The website is comign on, but we want pictures and social!
 
 First things done, now we're going to do progressive enhancement through multiple services.
 
@@ -137,3 +141,7 @@ First things done, now we're going to do progressive enhancement through multipl
 . Git Repository; `https://github.com/city-breaks-on-openshift/photo-service.git`
 . Watch build and deploy
 . Show photos API
+
+=== Operations: I want images stored externally where they can be easily managed.
+
+TODO
