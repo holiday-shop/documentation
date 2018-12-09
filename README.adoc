@@ -12,7 +12,9 @@ image:screenshots/screenshot.png[image]
 
 == What do I need to deploy this microservices application?
 
-* A working OpenShift environment! 
+* A working OpenShift environment, preferably on Azure! 
+
+If you need help setting this up, see link:https://github.com/jamesread/single-node-openshift-azure-demo[single-node-openshift-azure-demo].
 
 == Microsoft Azure and .NET features
 
