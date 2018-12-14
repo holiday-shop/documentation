@@ -1,5 +1,5 @@
 :toc:
-= DEMO Guide: City Breaks 
+= DEMO Guide: City Holidays 
 
 [NOTE]
 This demo guide is intended for a reference and **prompt** for speakers who are showing this to an audience. These instructions are designed for people who know OpenShift and have run through the link:LAB.adoc[lab] several times before. It should not be used to learn how to use the project. For that, run through the more detailed link:LAB.adoc[lab instructions].
@@ -12,13 +12,13 @@ Use the *.NET Core* Source-2-image builder.
 
 include::includes/projectSetup.adoc[]
 
-* *Git Repository*: `https://github.com/city-breaks-on-openshift/public-shopping-website.git`
+* *Git Repository*: `https://github.com/city-holidays-on-openshift-azure/public-shopping-website.git`
 
 == Demo Scenarios 
 
-=== Business: Our city-breaks website should be web-scale! It needs to handle lots of orders.
+=== Business: Our city-holidays website should be web-scale! It needs to handle lots of orders.
 
-* Introduce the city-breaks concept, and different roles.
+* Introduce the city-holidays concept, and different roles.
 
 
 === Developer: I want to quickly get our .NET website into a container
@@ -37,7 +37,7 @@ include::includes/projectSetup.adoc[]
 
 Build the project;
 
-. *Git Repository*: `https://github.com/city-breaks-on-openshift/public-shopping-website.git`
+. *Git Repository*: `https://github.com/city-holidays-on-openshift-azure/public-shopping-website.git`
 . Look at S2I Build process
 .. Highlight the "pushed to registry" - a container has been built
 . Look at the overview, to see deployment
@@ -149,7 +149,7 @@ First things done, now we're going to do progressive enhancement through multipl
 === Developer: I want to use a separate service for serving photos, progressive enhancement
 
 . **Add to Project**, **Browse Catalog**, **.NET Core**
-. Git Repository; `https://github.com/city-breaks-on-openshift/photo-service.git`
+. Git Repository; `https://github.com/city-holidays-on-openshift-azure/photo-service.git`
 . Watch build and deploy
 . Show photos API
 

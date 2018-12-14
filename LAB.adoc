@@ -1,15 +1,15 @@
 :toc:
 
-= LAB Guide: City Breaks
+= LAB Guide: City Holidays
 
 [NOTE]
 This lab guide is intended for learning the project, and running though things on your own. If you already know this project, and are showing other people, you might want to use the link:DEMO.adoc[demo guide] :-)
 
 = The first service: `public-shopping-website`
 
-=== Business: Our city-breaks website should enable our digital travel agency! 
+=== Business: Our city-holidays website should enable our digital travel agency! 
 
-Your business managers and executives have told your tech department that the public shopping website for your city breaks travel agency needs to be at the forefront of the company's digital agenda! You don't really know what that really means, but you know the site will handle lots of traffic, and is the main source of your travel agency's revenue now-a-days. All your customers are now booking online. You think that using OpenShift and a Microservices approach will get you running more quickly, and keep the company on-track for it's digital agenda.
+Your business managers and executives have told your tech department that the public shopping website for your city holidays travel agency needs to be at the forefront of the company's digital agenda! You don't really know what that really means, but you know the site will handle lots of traffic, and is the main source of your travel agency's revenue now-a-days. All your customers are now booking online. You think that using OpenShift and a Microservices approach will get you running more quickly, and keep the company on-track for it's digital agenda.
 
 The Developers and Operations teams will have to work together with OpenShift to make this happen.
 
@@ -41,8 +41,8 @@ important to select version 2 builder. If you use select version 1 here
 by accident then it will expect a .NET Core 1.0 project.json files and
 similar that have been deprecated and the build would fail!
 
-* *Application Name:* `city-breaks`
-* *Git Repository:* `https://github.com/city-breaks-on-openshift/public-shopping-website.git`
+* *Application Name:* `city-holidays`
+* *Git Repository:* `https://github.com/city-holidays-on-openshift-azure/public-shopping-website.git`
 
 image:screenshots/dotnetDeploymentWizard2.png[image]
 
@@ -162,7 +162,7 @@ image::screenshots/scalePods.png[]
 
 === Operations: I want it to scale automatically based on CPU load
 
-Scaling manually to several pods is OK, when you expect load, but you can scale automatically based on several factors, including CPU load. Go to the Deployment Configuration for city-breaks, and add an auto-scaler.
+Scaling manually to several pods is OK, when you expect load, but you can scale automatically based on several factors, including CPU load. Go to the Deployment Configuration for city-holidays, and add an auto-scaler.
 
 image::screenshots/addAutoscaler.png[]
 

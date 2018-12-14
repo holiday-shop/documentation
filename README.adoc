@@ -1,12 +1,12 @@
 :toc:
 
-= City Breaks 
+= City Holidays 
 
 = What is this?
 
-City Beaks is a simple microservice application that simulates a holiday booking website (for
-city breaks). This demonstrates
-severeal features of OpenShift Container Platform with .NET and Azure.
+City Holidays is a simple microservice application that simulates a holiday booking website for
+city holidays. This demonstrates
+severeal features of OpenShift Container Platform with and Azure, and .NET.
 
 image:screenshots/app.png[image]
 
